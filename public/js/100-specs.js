@@ -1258,9 +1258,9 @@ HundredSpecs.prototype = {
 			js.expect.E.expect(planets).to.be.an(Array);
 		});
 		js.mocha.M.it("should have 8 items",function() {
-			js.expect.E.expect(planets.length).to.eql(8);
+			js.expect.E.expect(planets.length).to.eql(9);
 		});
-		var planetsKeys = ["Mercury","Venus","Earth","Mars","Jupiter","Saturn","Uranus","Neptune"];
+		var planetsKeys = ["Mercury","Venus","Earth","Mars","Jupiter","Saturn","Uranus","Neptune",'Pluto'];
 		js.mocha.M.it("should contain the name of each of our solar system's planets",function() {
 			js.expect.E.expect(planetsKeys[0]).to.eql(planets[0]);
 			js.expect.E.expect(planetsKeys[1]).to.eql(planets[1]);
@@ -1270,6 +1270,8 @@ HundredSpecs.prototype = {
 			js.expect.E.expect(planetsKeys[5]).to.eql(planets[5]);
 			js.expect.E.expect(planetsKeys[6]).to.eql(planets[6]);
 			js.expect.E.expect(planetsKeys[7]).to.eql(planets[7]);
+      js.expect.E.expect(planetsKeys[8]).to.eql(planets[8]);
+
 		});
 		js.mocha.M.it("should have each planet listed in order",function() {
 			js.expect.E.expect(planets[0]).to.eql("Mercury");
@@ -1280,6 +1282,8 @@ HundredSpecs.prototype = {
 			js.expect.E.expect(planets[5]).to.eql("Saturn");
 			js.expect.E.expect(planets[6]).to.eql("Uranus");
 			js.expect.E.expect(planets[7]).to.eql("Neptune");
+      js.expect.E.expect(planets[8]).to.eql("Pluto");
+
 		});
 	}
 	,step3: function() {

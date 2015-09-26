@@ -489,6 +489,13 @@ function purchaseLaptop(laptop) {
  * @return {Bool}
  *
  */
+function canTalkAbout(club) {
+  if (club === club_name) {
+    return false;
+  } else {
+    return true;
+  }
+}
 
 
 /* Step 30

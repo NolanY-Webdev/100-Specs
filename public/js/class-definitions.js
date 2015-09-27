@@ -589,6 +589,22 @@ Garden.prototype.grow = function() {
  *
  */
 
+function SolarSystem() {
+  this.planets = [];
+}
+
+SolarSystem.prototype.addPlanet = function(planet) {
+  this.planets.push(planet);
+}
+
+SolarSystem.prototype.removePlanet = function(planet) {
+  if (planet == 'Pluto') {
+    console.log('you\'re an asshole Pluto has been through enough.');
+  }
+  var index = this.planets.indexOf(planet);
+  this.planets.splice(index, 1);
+}
+
 
 /* Step 33
  *

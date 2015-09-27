@@ -807,7 +807,7 @@ HundredSpecs.prototype = {
 		js.mocha.M.it("should remove a planet from the 'planets' property array",function() {
 			var mySystem = new SolarSystem();
 			js.expect.E.expect(mySystem.planets).to.have.length(0);
-			mySystem.addPlanet("Pluto");
+			mySystem.addPlanet("Gamma 12");
 			js.expect.E.expect(mySystem.planets).to.have.length(1);
 			mySystem.removePlanet();
 			js.expect.E.expect(mySystem.planets).to.have.length(0);

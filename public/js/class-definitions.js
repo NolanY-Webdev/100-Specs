@@ -518,6 +518,13 @@ function canTalkAbout(club) {
  *   write
  *
  */
+function Pen(color) {
+  this.color = color;
+}
+
+Pen.prototype.write = function(message) {
+    return this.color + ': ' + message;
+  };
 
 
 /* Step 31
@@ -546,7 +553,24 @@ function canTalkAbout(club) {
  *   grow
  *
  */
+function Garden(plantsTotal, isWatered) {
+  this.plantsTotal = plantsTotal;
+  this.isWatered = isWatered ? isWatered : false;
+}
 
+Garden.prototype.water = function() {
+  this.isWatered = true;
+};
+
+Garden.prototype.grow = function() {
+  if (this.isWatered === true) {
+    this.plantsTotal++;
+    this.isWatered = false;
+    return true;
+  } else {
+    return false;
+  }
+};
 
 /* Step 32
  *

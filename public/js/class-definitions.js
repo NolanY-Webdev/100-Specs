@@ -595,7 +595,7 @@ function SolarSystem() {
 
 SolarSystem.prototype.addPlanet = function(planet) {
   this.planets.push(planet);
-}
+};
 
 SolarSystem.prototype.removePlanet = function(planet) {
   if (planet == 'Pluto') {
@@ -603,7 +603,7 @@ SolarSystem.prototype.removePlanet = function(planet) {
   }
   var index = this.planets.indexOf(planet);
   this.planets.splice(index, 1);
-}
+};
 
 
 /* Step 33
@@ -618,7 +618,7 @@ SolarSystem.prototype.removePlanet = function(planet) {
  *
  * Add a method "getsInTrouble" that returns a message
  * "Help me Obi-wan Kenobi, you're my only hope"
- * and sets the property 'isInTroube' to TRUE
+ * and sets the property 'isInTrouble' to TRUE
  *
  * Add a method "marries" that takes a prospective
  * love interest and returns true for "Han Solo" or false for anyone
@@ -638,6 +638,40 @@ SolarSystem.prototype.removePlanet = function(planet) {
  *   marries
  *
  */
+function PrincessLeia(name, money, age, gender) {
+  this.name = name;
+  this.money = money;
+  this.age = age;
+  this.gender = gender;
+  this.isInTrouble = null;
+}
+
+PrincessLeia.prototype = Object.create(Person.prototype, {
+  constructor :{
+    value : PrincessLeia
+  }
+}
+);
+
+PrincessLeia.prototype.shootsGun = function() {
+  this.isInTrouble = false;
+  return 'Leia shoots her gun wildly';
+};
+
+PrincessLeia.prototype.getsInTrouble = function() {
+  this.isInTrouble = true;
+  return 'Help me Obi-wan Kenobi, you\'re my only hope';
+};
+
+PrincessLeia.prototype.marries = function(person) {
+  if (person == 'Han Solo') {
+    return true;
+  } else if (person == 'Luke Skywalker') {
+    return 'Gross!';
+  } else {
+    return false;
+  }
+};
 
 
 /* Step 34
@@ -657,6 +691,18 @@ SolarSystem.prototype.removePlanet = function(planet) {
  *   staplePapers
  *
  */
+function Stapler(color, maxPapers) {
+  this.color = color;
+  this.maxPapers = maxPapers;
+}
+
+Stapler.prototype.staplePapers = function(amount) {
+  if (amount > this.maxPapers) {
+    return false;
+  } else {
+    return true;
+  }
+};
 
 
 /* Step 35

@@ -1027,6 +1027,10 @@ function Box(contents, open) {
  * Door class
  * @param {boolean} isOpen Whether the door is opened or closed
  */
+function Door(open) {
+  this.isOpen = open;
+}
+
 
 
 /**
@@ -1036,6 +1040,11 @@ function Box(contents, open) {
  * @param {number} size  The shoe size
  * @param {string} color The shoe color
  */
+function Shoe(size, color) {
+  this.size = size;
+  this.color = color;
+}
+
 
 
 /**

@@ -1005,7 +1005,7 @@ function Vehicle(make, model) {
  *
  */
 function Shape(sides) {
-  this.sides = (sides > 3) ? sides : null;
+  this.sides = (sides >= 3) ? sides : null;
 }
 
 /**
@@ -1197,6 +1197,14 @@ Vehicle.prototype.drive = function(street) {
  * Any other number => "Could not determine type"
  *
  */
+Shape.prototype.getType = function() {
+  var types = ['triangle', 'quadrilateral', 'pentagon', 'hexagon', 'heptagon', 'octagon', 'nonagon', 'decagon'];
+  if(this.sides >= 3 && this.sides <= 10) {
+    return types[this.sides - 3];
+  } else {
+    return 'Could not determine type';
+  }
+};
 
 
 /* Step 84

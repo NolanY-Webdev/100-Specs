@@ -989,10 +989,10 @@ function Animal(species, gender) {
  * @param {string} make The vehicle's make
  * @param {string} model The vehicle's model
  */
- function Vehicle(make, model) {
+function Vehicle(make, model) {
   this.make = make;
   this.model = model;
- }
+}
 
 
 /**
@@ -1004,7 +1004,9 @@ function Animal(species, gender) {
  * value of the sides property to null.
  *
  */
-
+function Shape(sides) {
+  this.sides = (sides > 3) ? sides : null;
+}
 
 /**
  * Step 53

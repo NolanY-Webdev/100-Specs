@@ -1377,8 +1377,10 @@ var polygon = poly.getType();
  * and assign the values to each variable below.
  *
  */
-var openAClosedBox;
-var closeAnOpenBox;
+
+var christmasPres = new Box('Pony', false);
+var openAClosedBox = christmasPres.openBox();
+var closeAnOpenBox = christmasPres.openBox();
 
 
  /* Step 95

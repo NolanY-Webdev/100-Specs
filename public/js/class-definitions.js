@@ -1319,7 +1319,17 @@ Cookie.prototype.swipedByCookieMonster = function(dayOfTheWeek) {
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
  *
  */
-
+Meal.prototype.containsJunkFood = function() {
+  var junkFood = ['chips', 'soda', 'ice cream', 'popcorn', 'candy'];
+  var junkPresent = false;
+  for (var i = 0; i < this.foods.length; i++) {
+    var idx = junkFood.indexOf(this.foods[i]);
+    if(idx !== -1) {
+      junkPresent = true;
+    }
+  }
+  return junkPresent;
+};
 
  /* Steps 91 to 100
  *

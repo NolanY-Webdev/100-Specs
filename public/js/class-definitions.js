@@ -1073,7 +1073,9 @@ function Lightbulb(on) {
  * Cookie class
  * @param {string} flavor The cookie's flavor
  */
-
+function Cookie(flavor) {
+  this.flavor = flavor;
+}
 
 /**
  * Step 59
@@ -1081,7 +1083,9 @@ function Lightbulb(on) {
  * Meal class
  * @param {Array} foods All the foods in the meal
  */
-
+function Meal(food) {
+  this.foods = food;
+}
 
 /**
  * Create a new instance of the Classes you defined above, below!

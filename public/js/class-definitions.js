@@ -1389,8 +1389,8 @@ var closeAnOpenBox = christmasPres.openBox();
  * and assign the values to each variable below.
  *
  */
-var openAClosedDoor;
-var closeAnOpenDoor;
+var openAClosedDoor = bankVault.openClose();
+var closeAnOpenDoor = bankVault.openClose();
 
 
 /* Step 96

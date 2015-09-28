@@ -1133,7 +1133,7 @@ var gingerbread = new Cookie('gingerbread');
 // Create 2 different meals
 var breakfast = new Meal(['cereal', 'milk']);
 var dinner = new Meal(['fish', 'vegetables']);
-
+var snack = new Meal(['candy', 'popcorn']);
 
  /* Steps 81 to 90
  *
@@ -1419,8 +1419,8 @@ var shortStory = singleStory.isATallStory(5);
  * and assign the values to each variable below.
  *
  */
-var kitchenLightsOn;
-var porchLightsOff;
+var kitchenLightsOn = incandescent.flipSwitch('on');
+var porchLightsOff = halogen.flipSwitch('sorta on');
 
 
  /* Step 99
@@ -1429,8 +1429,8 @@ var porchLightsOff;
  * and assign the values to each variable below.
  *
  */
-var cookieMonsterPwns;
-var cookieMonsterBlocked;
+var cookieMonsterPwns = chocolateChip.swipedByCookieMonster('Monday');
+var cookieMonsterBlocked = gingerbread.swipedByCookieMonster('ThurSunDay');
 
 
  /* Step 100
@@ -1439,5 +1439,5 @@ var cookieMonsterBlocked;
  * and assign the values to each variable below.
  *
  */
-var badForYou;
-var goodForYou;
+var badForYou = snack.containsJunkFood();
+var goodForYou = dinner.containsJunkFood();

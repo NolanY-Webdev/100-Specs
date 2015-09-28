@@ -1287,10 +1287,7 @@ Lightbulb.prototype.flipSwitch = function(on) {
     this.isOn = false;
     return false;
   }
-}
-
-
-
+};
 
  /* Step 89
  *
@@ -1299,6 +1296,14 @@ Lightbulb.prototype.flipSwitch = function(on) {
  * and the dayOfTheWeek is "Monday", return true.  Else return false.
  *
  */
+Cookie.prototype.swipedByCookieMonster = function(dayOfTheWeek) {
+  if (this.flavor == 'chocolate' && dayOfTheWeek == 'Monday') {
+    return true;
+  } else {
+    return false;
+  }
+};
+
 
 
  /* Step 90

@@ -1355,8 +1355,8 @@ var notWarmOrColdAnimal = mrsButtCat.isWarmBlooded();
  * and assign the values to each variable below.
  *
  */
-var streetDriving;
-var forwardDriving;
+var streetDriving = civic.drive('away');
+var forwardDriving = civic.drive();
 
 
  /* Step 93
@@ -1365,8 +1365,10 @@ var forwardDriving;
  * and assign the values to each variable below.
  *
  */
-var decagon;
-var polygon;
+var deca = new Shape(10);
+var decagon = deca.getType();
+var poly = new Shape(243852439857);
+var polygon = poly.getType();
 
 
 /* Step 94

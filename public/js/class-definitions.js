@@ -714,7 +714,7 @@ Stapler.prototype.staplePapers = function(amount) {
  * Add a method named 'addDiscipline' that takes a string as an argument and
  * adds it to the discipline property. Return the value of the discipline property
  *
- * Add a method named 'checkDisciple' that takes a string as an argument and
+ * Add a method named 'checkDiscipline' that takes a string as an argument and
  * checks if the argument can be found in the discipline property. Return false
  * if it is not found otherwise return back true.
  *
@@ -743,6 +743,44 @@ Stapler.prototype.staplePapers = function(amount) {
  *   addDiscovery
  *
  */
+function Scientist(name, money, age, gender) {
+  this.name = name;
+  this.money = money;
+  this.age = age;
+  this.gender = gender;
+  this.disciplines = [];
+  this.discoveries = [];
+}
+Scientist.prototype = Object.create(Person.prototype, {
+  constructor : {
+    value : Scientist
+  }
+});
+Scientist.prototype.addDiscipline = function(disc) {
+  this.disciplines.push(disc);
+  return this.disciplines;
+};
+Scientist.prototype.checkDiscipline = function(disc) {
+  var idx = this.disciplines.indexOf(disc);
+  if (idx == -1) {
+    return false;
+  } else {
+    return true;
+  }
+};
+Scientist.prototype.addDiscovery = function(disco) {
+  this.discoveries.push(disco);
+  var iAmTheGreetest = 'I discovered ' + this.discoveries[0];
+  for (var i = 1; i < this.discoveries.length; i++) {
+    if (i == this.discoveries.length - 1) {
+      iAmTheGreetest += ' and ' + this.discoveries[i];
+    } else {
+      iAmTheGreetest += ', ' + this.discoveries[i];
+    }
+  }
+  iAmTheGreetest += '.';
+  return iAmTheGreetest;
+};
 
 
 /* Step 36

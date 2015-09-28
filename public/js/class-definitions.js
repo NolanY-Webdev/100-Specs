@@ -1270,9 +1270,6 @@ House.prototype.isATallStory = function(storiesTooTall) {
   }
 };
 
-
-
-
  /* Step 88
  *
  * Declare a Lightbulb method called flipSwitch that accepts a
@@ -1282,6 +1279,17 @@ House.prototype.isATallStory = function(storiesTooTall) {
  * Return true if isOn is true, false otherwise.
  *
  */
+Lightbulb.prototype.flipSwitch = function(on) {
+  if(on == 'on') {
+    this.isOn = true;
+    return true;
+  } else {
+    this.isOn = false;
+    return false;
+  }
+}
+
+
 
 
  /* Step 89
